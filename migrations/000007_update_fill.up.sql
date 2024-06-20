@@ -1,0 +1,1 @@
+ALTER TABLE fills ADD liquidity varchar(255) NOT NULL DEFAULT '';

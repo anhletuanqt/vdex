@@ -1,0 +1,21 @@
+@startuml vdex
+actor       User       
+participant Vdex_Contract as VC
+participant Event_Listener as EL
+queue       Kafka       as K
+participant Matching_Engine as ME
+participant Snapshot as SS
+participant Worker as WK
+database    Database   as DB
+User -> VC : Call smart contract to create/cancel an order
+EL -> VC : Listen events from vdex contract
+EL -> DB : Store order information into database
+EL -> K : Push order to kafka
+ME -> K : Pull messages from Kafka to handle matching
+ME -> SS : Store snapshot after matching successfully
+ME -> K : Push matching result to kafka
+WK -> K : Pull matching result from kafka
+WK -> DB : Update tick/order/fill/settlement/trade... tables according to matching information
+WK -> VC : Call vdex contract to settle orders
+WK -> K : Push updated information to kafka so others services can monitor
+@enduml

@@ -1,0 +1,7 @@
+.vscode
+.idea
+client
+app.env
+build
+note.txt
+ws_client

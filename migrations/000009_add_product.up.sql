@@ -1,0 +1,2 @@
+INSERT INTO "products" ("id","created_at","updated_at","base_currency","quote_currency","base_min_size","base_max_size","base_scale","quote_scale","quote_increment","quote_min_size","quote_max_size") values
+('ETH-VIC',null,null,'ETH','VIC',0.00001,10000,4,2,0.01,0E-16,0E-16);

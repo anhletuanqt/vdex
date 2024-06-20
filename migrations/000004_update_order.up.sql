@@ -1,0 +1,1 @@
+ALTER TABLE orders ADD expiration bigint DEFAULT 0;

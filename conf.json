@@ -1,0 +1,39 @@
+{
+    "dbURL": "postgres://postgres:postgres@localhost:1234/vdex?sslmode=disable",
+    "jsonRPC": "<YOUR_JSON_RPC>",
+    "chainId": 14000,
+    "redis": {
+        "addr": ":6379",
+        "password": "",
+        "username": ""
+    },
+    "kafka": {
+        "brokers": [
+            "localhost:29092"
+        ]
+    },
+    "pushServer": {
+        "port": ":8002",
+        "path": "/ws"
+    },
+    "restServer": {
+        "port": ":3000"
+    },
+    "jwtSecret": "flj23jfoi23apdHJUHJHJHU!@#$%^HJUHJHJl3jfslkj23za01mf3HJUHJHJHU!@#$%^HJUHJHJ",
+    "contracts": {
+        "vdex": "<VDEX_CONTRACT>"
+    },
+    "tokens": {
+        "<BNB_ADDR>": "BNB",
+        "<ETH_ADDR>": "ETH"
+    },
+    "dispatcherWallets": [
+        "<PRIV_KEY_1",
+        "<PRIV_KEY_1"
+    ],
+    "gaslessWallets": [
+        "PRIV_KEY_1",
+        "PRIV_KEY_1"
+    ],
+    "env": "local"
+}

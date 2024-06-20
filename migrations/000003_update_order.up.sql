@@ -1,0 +1,1 @@
+ALTER TABLE orders ADD nonce bigint DEFAULT 0;
